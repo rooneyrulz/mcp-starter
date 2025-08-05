@@ -13,9 +13,11 @@
     "build": "tsc",
     "build:watch": "tsc --watch",
     "start": "node dist/server.js",
-    "dev": "tsx src/server.ts"
+    "dev": "tsx src/server.ts",
+    "dev:inspect": "set DANGEROUSLY_OMIT_AUTH=true && npx @modelcontextprotocol/inspector npm run dev"
   },
   "devDependencies": {
+    "@modelcontextprotocol/inspector": "^0.16.2",
     "@types/node": "^24.2.0",
     "tsx": "^4.20.3",
     "typescript": "^5.9.2"
