@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Setup MCP Server",
+    "description": "Initialize the MCP server with basic configuration using TypeScript and Node.js.",
+    "author": "ruzny",
+    "priority": "high",
+    "dueDate": "2025-08-10"
+  },
+  {
+    "title": "Implement MCP Client",
+    "description": "Create a simple MCP client to communicate with the server using stdio.",
+    "author": "ruzny",
+    "priority": "medium",
+    "dueDate": "2025-08-12"
+  },
+  {
+    "title": "Add Resource and Tool Handling",
+    "description": "Define how resources and tools are registered and used within the MCP server.",
+    "author": "ruzny",
+    "priority": "high",
+    "dueDate": "2025-08-14"
+  },
+  {
+    "title": "Implement Prompt and Completion Flow",
+    "description": "Add functionality to handle prompts and generate completions.",
+    "author": "ruzny",
+    "priority": "medium",
+    "dueDate": "2025-08-16"
+  },
+  {
+    "title": "Add Sampling Strategy Support",
+    "description": "Enable sampling logic in the completion generation process.",
+    "author": "ruzny",
+    "priority": "low",
+    "dueDate": "2025-08-18"
+  },
+  {
+    "title": "Write Project Documentation",
+    "description": "Document how to run and extend the MCP starter project.",
+    "author": "ruzny",
+    "priority": "medium",
+    "dueDate": "2025-08-20"
+  },
+  {
+    "title": "Add Configuration Support",
+    "description": "Implement a config system (e.g., JSON or YAML) to allow easy customization of server behavior.",
+    "author": "john",
+    "priority": "medium",
+    "dueDate": "2025-08-22"
+  },
+  {
+    "title": "Add Configuration Support",
+    "description": "Implement a config system (e.g., JSON or YAML) to allow easy customization of server behavior.",
+    "author": "john",
+    "priority": "medium",
+    "dueDate": "2025-08-22"
+  }
+]
