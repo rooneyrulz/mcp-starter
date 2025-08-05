@@ -7,10 +7,40 @@ const server = new McpServer({
   name: "sample-mcp-server",
   version: "1.0.0",
   capabilities: {
-    resources: {},
+    resources: {
+      "todos": {
+        description: "A list of all todos",
+        mimeType: "application/json",
+      },
+    },
     tools: {},
     prompts: {},
   },
+});
+
+// Register the todos resource
+server.registerResource("todos", "todos://all", {
+  title: "All Todos",
+  description: "A list of all todos",
+  mimeType: "application/json",
+}, async (uri) => {
+  try {
+    const todos = await import("./data/todos.json", {
+      with: { type: "json" },
+    }).then((module) => module.default);
+
+    return {
+      contents: [
+        {
+          uri: uri.href,
+          mimeType: "application/json",
+          text: JSON.stringify(todos, null, 2),
+        },
+      ],
+    };
+  } catch (error) {
+    throw new Error(`Failed to load todos: ${(error as Error).message}`);
+  }
 });
 
 // tools
@@ -29,15 +59,15 @@ server.registerTool(
   },
   async (input) => {
     try {
-        const todo = await createTodo(input);
-        return {
-            content: [
-                {
-                    type: "text",
-                    text: `Created todo: ${JSON.stringify(todo)}`,
-                }
-            ]
-        }
+      const todo = await createTodo(input);
+      return {
+        content: [
+          {
+            type: "text",
+            text: `Created todo: ${JSON.stringify(todo)}`,
+          }
+        ]
+      }
     } catch (error) {
       return {
         content: [
