@@ -1,0 +1,26 @@
+{
+  "name": "sample-mcp-server",
+  "version": "1.0.0",
+  "description": "simple mcp server with node-ts",
+  "keywords": [
+    "mcp"
+  ],
+  "license": "MIT",
+  "author": "ruzny",
+  "type": "module",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "start": "node dist/server.js",
+    "dev": "tsx src/server.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^24.2.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.1"
+  }
+}

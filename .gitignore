@@ -1,0 +1,74 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+.pnpm-debug.log
+
+# TypeScript
+dist/
+*.tsbuildinfo
+
+# tsx (tsx automatically generates a cache sometimes)
+tsx.cache/
+
+# Logs
+logs
+*.log
+*.log.*
+log/
+*.csv
+*.out
+*.pid
+*.seed
+*.tgz
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Coverage reports
+coverage/
+.nyc_output/
+
+# Build artifacts
+build/
+out/
+tmp/
+temp/
+.cache/
+.next/
+turbo/
+.eslintcache
+.husky/_/
+.svelte-kit/
+
+# TypeScript declaration map files
+*.d.ts.map
+
+# Misc
+*.local
+*.bak
+*.orig
+
+# Optional if using Docker
+docker-compose.override.yml
+docker-compose.dev.yml
+
+# Optional if using VSCode dev containers
+.devcontainer/
+
+# Optional if using testing tools
+jest.config.ts
+jest.setup.ts
